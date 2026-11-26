@@ -1,0 +1,67 @@
+\contentsline {section}{\numberline {1}Introduction: Retail Backtests vs. Institutional Reality}{4}{section.1}%
+\contentsline {subsection}{\numberline {1.1}The Four Structural Failures of Naive Algorithmic Architecture}{4}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Research Objective \& Design Mandate}{4}{subsection.1.2}%
+\contentsline {section}{\numberline {2}The Dual Sub-Strategy Architecture}{5}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Growth Engine: 12-1 Month Cross-Sectional Momentum}{5}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}The Mathematical Model}{5}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}Why Equal Weighting and Top 5 Concentration?}{5}{subsubsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.2}Defensive Engine: Cross-Asset Inverse-Volatility Risk Parity}{5}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Mathematical Formulation}{6}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Why Inverse Volatility Instead of Full Covariance ERC?}{6}{subsubsection.2.2.2}%
+\contentsline {section}{\numberline {3}The Generation-by-Generation Evolutionary Architecture}{6}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Generation 1: The Basic Binary 200-Day SMA Filter}{6}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}The Fatal Flaw: The Whipsaw Cost Spiral}{6}{subsubsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.2}Generation 2: Hysteresis Buffer Band (Spatial Filtering)}{7}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Why Dynamic ATR Bands Instead of Static $1.5\%$?}{7}{subsubsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.3}Generation 3: Temporal Filtering (Time-Delay Confirmation)}{7}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Generation 4: Volatility Circuit Breaker: From Hardcoded $24.0$ to Dynamic 95th Percentile}{7}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {3.4.1}Pitfall of Hardcoded VIX Ceilings ($\text {VIX} \ge 24.0$)}{8}{subsubsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.2}The Mathematical Remedy: Rolling Empirical CDF and Order Statistics}{8}{subsubsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.5}Generation 5: Continuous Sigmoid Allocation with Volatility-Adaptive Slope}{8}{subsection.3.5}%
+\contentsline {subsubsection}{\numberline {3.5.1}Dynamic Slope Adaptivity: $k_t = C / \sigma _{\text {Nifty}}(t)$}{9}{subsubsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.6}Generation 6: Microstructural Friction \& Turnover Optimization}{9}{subsection.3.6}%
+\contentsline {subsubsection}{\numberline {3.6.1}1. Piecewise Sigmoid Upper Snap Threshold ($d_t \ge +3.5\%$)}{9}{subsubsection.3.6.1}%
+\contentsline {subsubsection}{\numberline {3.6.2}2. Minimum Allocation Delta Threshold (The Rebalance Deadband)}{9}{subsubsection.3.6.2}%
+\contentsline {subsubsection}{\numberline {3.6.3}3. Highest-In, First-Out (HIFO) Tax-Lot Selection}{10}{subsubsection.3.6.3}%
+\contentsline {subsection}{\numberline {3.7}Generation 7: Microstructural Execution, Cash Compounding \& Factor Recovery}{10}{subsection.3.7}%
+\contentsline {subsubsection}{\numberline {3.7.1}1. Resolution of the Deadband ``Idle SIP Cash Starvation'' Bug \& Surgical Dropped-Stock Swaps}{10}{subsubsection.3.7.1}%
+\contentsline {subsubsection}{\numberline {3.7.2}2. The \texttt {LIQUIDBEES.NS} Price-Peg Fix \& 20\% Risk-Parity Cash Cap}{11}{subsubsection.3.7.2}%
+\contentsline {subsubsection}{\numberline {3.7.3}3. Section 74 Short-Term Capital Loss (STCL) Carry-Forward}{11}{subsubsection.3.7.3}%
+\contentsline {subsubsection}{\numberline {3.7.4}4. Cross-Sectional Momentum in Indian Mega-Caps: Raw Return vs. Volatility Normalization}{12}{subsubsection.3.7.4}%
+\contentsline {subsubsection}{\numberline {3.7.5}5. Dynamic Asymmetric Sigmoid Pivot \& Recovery Snap}{12}{subsubsection.3.7.5}%
+\contentsline {subsubsection}{\numberline {3.7.6}6. Differentiated Microstructural Execution Thresholds}{12}{subsubsection.3.7.6}%
+\contentsline {section}{\numberline {4}Analysis of Hardcoded Parameters vs. Adaptive Mechanisms: Overfitting Audit}{13}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Signal-Layer Parameter Sensitivity Grid Sweep (Anti-Overfitting Verification)}{13}{subsection.4.1}%
+\contentsline {section}{\numberline {5}Elimination of Lookahead and Survivorship Bias}{15}{section.5}%
+\contentsline {subsection}{\numberline {5.1}The Anatomy of Survivorship Bias in Index Constituents}{15}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Construction of the Point-in-Time (PIT) Universe Matrix}{15}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Elimination of Temporal Lookahead Bias: Causal vs. Centered Glitch Cleaning}{15}{subsection.5.3}%
+\contentsline {section}{\numberline {6}Institutional Capital Accounting: Time-Weighted Return (Unitized NAV) vs. Cash-Flow Contamination}{16}{section.6}%
+\contentsline {subsection}{\numberline {6.1}The SIP Cash-Flow Contamination Fallacy in Retail Backtests}{16}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Mathematical Formulation of Institutional Unitized NAV (Time-Weighted Return)}{16}{subsection.6.2}%
+\contentsline {section}{\numberline {7}Statutory Indian Tax Architecture: Statutory FIFO vs. HIFO \& Section 112A LTCG}{17}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Regulatory Mandate: Demat FIFO Under Section 45(2A)}{17}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Holding Period Segregation \& Section 112A LTCG Exemption}{17}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Section 74 Set-Off and Carry-Forward Hierarchy}{18}{subsection.7.3}%
+\contentsline {section}{\numberline {8}Empirical Backtest Results \& Comparative Analysis (2018--2023)}{18}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Full Horizon Performance Metrics Table (2018--2023)}{18}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Generation-by-Generation Architecture Evolution Summary}{19}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Quantifying the Survivorship Premium: Model 1 vs. Model 2}{19}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}Crisis Sub-Period Stress Tests}{19}{subsection.8.4}%
+\contentsline {subsection}{\numberline {8.5}Out-of-Sample (OOS) Empirical Validation: 2024--2026 (Frozen Parameters)}{20}{subsection.8.5}%
+\contentsline {subsection}{\numberline {8.6}HNI \& Family Office Capital Scale Benchmark (NIFTY 50 vs. Generation 6 vs. Generation 7)}{21}{subsection.8.6}%
+\contentsline {subsubsection}{\numberline {8.6.1}In-Sample Capital Scale Performance (2018--2023)}{22}{subsubsection.8.6.1}%
+\contentsline {subsubsection}{\numberline {8.6.2}Out-of-Sample Capital Scale Performance (2024--2026, Frozen Parameters)}{22}{subsubsection.8.6.2}%
+\contentsline {subsection}{\numberline {8.7}Retail ETF Proxy vs. HNI 5-Stock Basket Scalability Demonstration}{23}{subsection.8.7}%
+\contentsline {section}{\numberline {9}Quantitative Interview Cross-Questioning Defense Guide}{23}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Cross-Question 1: The Bias Defense}{23}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Cross-Question 2: The Whipsaw Defense}{24}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}Cross-Question 3: The Circuit Breaker Defense}{24}{subsection.9.3}%
+\contentsline {subsection}{\numberline {9.4}Cross-Question 4: The Idle Cash Starvation \& Surgical Dropped-Stock Swaps (Generation 7)}{25}{subsection.9.4}%
+\contentsline {subsection}{\numberline {9.5}Cross-Question 5: The Momentum Scoring Defense (Raw Return vs. Volatility Normalization)}{25}{subsection.9.5}%
+\contentsline {subsection}{\numberline {9.6}Cross-Question 6: The Risk Parity Cash Trap Defense}{26}{subsection.9.6}%
+\contentsline {subsection}{\numberline {9.7}Cross-Question 7: The Tax \& Friction Execution Defense}{26}{subsection.9.7}%
+\contentsline {subsection}{\numberline {9.8}Cross-Question 8: The Overfitting \& Signal Sensitivity Defense}{26}{subsection.9.8}%
+\contentsline {subsection}{\numberline {9.9}Cross-Question 9: The Time-Weighted Return (Unitized NAV) vs. Cash-Flow Contamination Defense}{27}{subsection.9.9}%
+\contentsline {subsection}{\numberline {9.10}Cross-Question 10: The Out-of-Sample (OOS) Reality Defense}{27}{subsection.9.10}%
+\contentsline {section}{\numberline {10}Conclusion}{28}{section.10}%
